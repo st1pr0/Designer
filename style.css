@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+ /*
+ //GENERAL SETTHINGS
+ */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1f1f1f;
+}
+
+img {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+img:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+ /*
+ //HERO SECTION
+ */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+#path1 {
+    stroke-dasharray: 571px;
+    stroke-dashoffset: 571px;
+    animation: line-anim 2s ease forwards;
+}
+
+#path2 {
+    stroke-dasharray: 515px;
+    stroke-dashoffset: 515;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+
+#path3 {
+    stroke-dasharray: 418px;
+    stroke-dashoffset: 418px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#path4 {
+    stroke-dasharray: 239px;
+    stroke-dashoffset: 239px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#path5 {
+    stroke-dasharray: 693px;
+    stroke-dashoffset: 693px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#path6 {
+    stroke-dasharray: 422px;
+    stroke-dashoffset: 422px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+#path7 {
+    stroke-dasharray: 512px;
+    stroke-dashoffset: 512px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+
+#path8 {
+    stroke-dasharray: 246px;
+    stroke-dashoffset: 246px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+.scroll {
+    opacity: 0;
+    width: 25px;
+    animation: move 1s infinite alternate 2.5s;
+    position: absolute;
+    top: 70%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+ /*
+ //ABOUT SECTION
+ */
+
+.about {
+    height: 90%;
+    margin-top: 5%;
+    padding: 0 10% 0 10%;
+}
+
+.about h1,
+.work h1 {
+    color: #707070;
+    font-size: 5rem;
+    z-index: 0;
+    opacity: .1;
+}
+
+.about h1 {
+    margin-bottom: 20%;
+    text-align: center;
+}
+
+.about-me-info {
+    max-width: 900px;
+    background-color: #252627;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+    padding: 50px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.about-me-info p {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    background-color: #252627;
+}
+
+.about-me-info p:nth-child(2),
+.about-me-info p:last-child {
+    margin-top: 2rem;
+}
+
+/*
+//PORTFOLIO SECTION
+*/
+
+.portfolio {
+    width: 100%;
+    /*padding: 4em 0 2em;
+    */
+    text-align: center;
+    padding: .8em 1.2em;
+}
+
+.portfolio ul li {
+    margin-bottom: 3em;
+}
+
+.portfolio ul li p {
+    padding: 0 .5em;
+}
+
+.portfolio img {
+    width: 70%;
+}
+
+.portfolio ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio h1 {
+    text-align: center;
+    color: #707070;
+    font-size: 5rem;
+    z-index: 0;
+    opacity: .1;
+}
+
+.portfolio p {
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/*
+//CONTACT SECTION
+*/
+
+.contact {
+    padding: 0 10% 0 10%;
+}
+
+.contact h1 {
+    color: #707070;
+    text-align: center;
+    font-size: 5rem;
+    opacity: .1;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 3px solid #707070;
+    margin: 20px 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: #707070;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+form input:last-child {
+    width: 150px;
+    background-color: #707070;
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+}
+
+/*
+//FOOTER SECTION
+*/
+
+footer hr {
+    border: 2px solid #707070;
+    margin-top: 80px;
+}
+
+footer p  {
+    text-align: center;
+    color: #707070;
+    font-size: 1.2rem;
+    padding: 30px 0;
+}
+
+/*
+//DEVICE OPTIMIZATION
+*/
+
+@media only screen and (min-width: 850px)  {
+    
+    .scroll {
+        width: 30px;
+        left: 50%;
+    }
+
+    .about h1 {
+        font-size: 8rem;
+    }
+
+    .portfolio ul {
+        margin: 0 0 4% 0;
+    }
+
+    .portfolio h1 {
+        text-align: right;
+        font-size: 8rem;
+    }
+
+    .portfolio p {
+        text-align: right;
+    }
+
+    form input,
+    form textarea {
+        width: 70%;
+    }
+
+    .contact h1 {
+        font-size: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1024px)  {
+
+    .about h1 {
+        font-size: 10rem;
+        margin-bottom: 5%;
+    }
+
+    .about-me-info p {
+        font-size: 1.3rem;
+    }
+
+    form input,
+    form textarea {
+        width: 50%;
+    }
+
+    .contact h1 {
+        font-size: 10rem;
+    }
+}
+
+@media only screen and (min-width: 560px)  {
+
+    /*.portfolio h1{
+        margin-top: 20%;
+    }*/
+
+    .about h1 {
+        margin-bottom: 15%;
+    }
+}
+
+@media only screen and (min-width: 650px)  {
+
+    .portfolio {
+        margin: 0% 0 10% 0;
+    }
+
+    .portfolio h1{
+        margin: 0;
+        text-align: right;
+    }
+
+    .about h1 {
+        text-align: left;
+    }
+
+    .portfolio img {
+        width: 95%;
+    }
+
+    .portfolio ul {
+        display: flex;
+        margin-top: -1em;
+        align-items: center;
+    }
+
+    .portfolio ul li {
+        margin-bottom: 0;
+    }
+
+    .portfolio p {
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 723px)  {
+    
+    .portfolio {
+        margin: auto 0 10% 0;
+    }
+
+    .about h1 {
+        margin-bottom: 12.5%;
+    }
+}
+
+@media only screen and (min-width: 1024px)  {
+
+    .portfolio {
+        width: 80%;
+    }
+
+    .portfolio {
+        margin: 0 auto 10% auto;
+    }
+
+    .about h1 {
+        margin-bottom: 7.5%;
+    }
+}
+
+@media only screen and (min-width: 1600px)  {
+
+    .portfolio {
+        width: 70%;
+        margin: 0% auto 5% auto;
+    }
+
+    .portfolio img {
+        width: 95%;
+    }
+
+    .portfolio {
+        padding: 2em 0 2em;
+    }
+}
